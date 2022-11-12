@@ -1,3 +1,7 @@
+#criado por Lucas gabriel
+# github : github.com/Lucas836
+# instagra : @lucas_git
+
 from datetime import datetime
 import os
 import sqlite3
@@ -309,7 +313,7 @@ def duvida():
 
 def limpar():
 	try:
-		os.system("clear")
+		tes = os.system("clear")
 	except:
 		os.system("cls")
 				
