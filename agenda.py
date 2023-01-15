@@ -1,5 +1,5 @@
 #criado por Lucas gabriel
-# github : github.com/Lucas836-hub
+# github : https://github.com/Lucas836-hub/
 # instagram : @lucas_git
 
 from datetime import datetime
