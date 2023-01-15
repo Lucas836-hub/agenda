@@ -1,10 +1,11 @@
 #criado por Lucas gabriel
-# github : github.com/Lucas836
-# instagra : @lucas_git
+# github : github.com/Lucas836-hub
+# instagram : @lucas_git
 
 from datetime import datetime
 import os
 import sqlite3
+
 data_e_hora_atuais = datetime.now()
 data_atual =data_e_hora_atuais.strftime("%d/%m/%Y")
 hora_atual = data_e_hora_atuais.strftime("%H:%M:%S")
