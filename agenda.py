@@ -5,6 +5,7 @@
 from datetime import datetime
 import os
 import sqlite3
+import update_file # CHAMANDO O ATUALIZADOR
 
 data_e_hora_atuais = datetime.now()
 data_atual =data_e_hora_atuais.strftime("%d/%m/%Y")
@@ -385,6 +386,15 @@ def menu():
 	print_data()
 	
 	excluir()
+
+	try:
+		if update_file.check_atualizacao("https://github.com/Lucas836-hub/agenda"):
+			self.titulo("ATUALIZANDO")
+			# ATUALIZANDO O SCRIPT LOCAL
+			update_file.atualizar("https://github.com/Lucas836-hub/agenda")
+	except:
+		print("Sem internet")
+
 	traco("MENU")
 	print("\n0 - Para infomaçoes do código\n1 - Como usar ?\n2 - Adicionar novo evento\n3 - Ver os eventos de hoje\n4 - Ver todos os eventos\n5 - Editar os eventos\n6 - Sair")
 	n=opcao(0,6)
