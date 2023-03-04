@@ -1,1 +1,4 @@
 db-sqlite3
+urllib3
+beautifulsoup4
+html5lib
