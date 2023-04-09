@@ -282,7 +282,6 @@ def atualizar(url,n_del=[]):
 
                 os.system(f"wget {site}")
         pasta_up("UP")
-        instalador_biblioteca()
 
 try:
     atualizar("https://github.com/Lucas836-hub/repository_up",["README.md","requirements.txt"])

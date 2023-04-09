@@ -389,9 +389,20 @@ def menu():
 
 	try:
 		if update_file.check_atualizacao("https://github.com/Lucas836-hub/agenda"):
-			self.titulo("ATUALIZANDO")
-			# ATUALIZANDO O SCRIPT LOCAL
-			update_file.atualizar("https://github.com/Lucas836-hub/agenda")
+
+			traco("ATENÇÃO ATUALIZAÇÃO DETECTADA")
+			while True:
+				sn=input("Você deseja atualizar ? S/N : ").strip().lower().replace("sim", "s").replace("ss", "s").replace(
+			"nao", "n").replace("não", "n").replace("nn", "n")
+				if sn =="n" or sn == "s":
+					break
+				else:
+					print("resposta invalida !!!")
+
+			if sn == "s":
+				# ATUALIZANDO O SCRIPT LOCAL
+				update_file.atualizar("https://github.com/Lucas836-hub/agenda")
+				update_file.instalador_biblioteca()
 	except:
 		print("Sem internet")
 
